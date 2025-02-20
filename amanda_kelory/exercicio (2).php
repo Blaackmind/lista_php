@@ -1,5 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $vnum = ($_POST["numero"]);
+    if (! is_numeric ($vnum)){
+       //echo "O valor digitado nao e numerico";
+    }
     $vnum = intval($_POST["numero"]);
     $vmsg = ($vnum % 2 == 0) ? "O número $vnum é par." : "O número $vnum é ímpar.";
 }
