@@ -1,6 +1,9 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (! is_numeric ($vnum)){
+        //echo "O valor digitado nao e numerico";
+     }
     $vnum = intval($_POST["numero"]);
     $vsoma = 0;
     for ($i = 1; $i <= $vnum; $i++) {

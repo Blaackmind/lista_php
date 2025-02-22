@@ -1,6 +1,9 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (! is_numeric ($vnum)){
+        //echo "O valor digitado nao e numerico";
+     }
     $vidade = intval($_POST["idade"]);
     $vmsg = ($vidade >= 18) ? "Que pena, você é maior de idade. pague seus impostos!" : "Que sorte! você é menor de idade então aproveita!";
 }
